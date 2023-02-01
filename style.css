@@ -1,0 +1,251 @@
+/*  CSS for the entire page */
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: 'Amiko', sans-serif;
+  color: var(--txt);
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Source Code Pro', monospace; */
+}
+/* 
+background color : #121212;
+primary color: #BB86FC;
+secondary color: #03DAC6;
+*/
+:root{
+  --primary-color:rgb(0, 47, 53);
+  --txt:rgba(0, 0, 0, 0.904);
+  --card-color: #121212;
+  --cardtxt:rgba(255, 255, 255, 0.89); 
+  --cardprimary-color:white;
+  --imgbg:#e6e6e6;
+
+}
+.dark-mode{
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.900);
+  --txt:rgba(255, 255, 255, 0.89);
+  --primary-color:white;
+  --card-color: #BB86FC;
+  --cardtxt:rgba(0, 0, 0, 0.904);
+  --cardprimary-color:black;
+  --imgbg:rgba(85, 85, 85, 0.562);
+}
+
+/* .container{
+  display: flex;
+  flex-direction: column;
+} */
+.fa-lightbulb-o{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 48px;
+  background-color: transparent;
+  border: 0px;
+}
+.fa-lightbulb-o:focus{
+  color: white;
+  background-color: transparent;
+}
+/* Intro Section CSS  */
+.intro{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  padding: 2vh 5vw;
+}
+.avatar img{
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--imgbg);
+  border: 4px solid rgb(0, 0, 0);
+}
+
+.info{
+  margin: auto;
+  padding: 15px;
+}
+.name{
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 2rem;
+  overflow: hidden;
+  border-right: .15em solid rgb(134, 134, 134);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end),
+  blink-caret 1s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 55% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  20% { border-color: rgb(77, 77, 77); }
+}
+.role{
+  font-family: 'Source Code Pro', monospace;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+
+.contactLogo:hover {
+  color: magenta;
+}
+.contactLogo {
+  font-size: 2rem;
+  text-decoration: none;
+  margin: 2vh 1vw;
+  color: var(--primary-color);
+}
+
+/* Intro Section CSS ends. */
+
+/* Skill section CSS */
+.skill{
+  padding: 2vh 5vw;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.skillHeading{
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: auto;
+}
+.list{
+  overflow-x: hidden;
+  margin: 1vh 5vw;
+  max-width: 90vw;
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+
+}
+.listItem {
+    font-size: 1.5rem;
+    font-family: 'Source Code Pro', monospace;
+    padding: 2vh 3vw;
+    margin:2vh;
+    background-color: var(--card-color);
+    color: var(--cardprimary-color);
+    font-weight: 550;
+    border-radius: 10vw;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+.listItem:hover{
+  border: 1px solid magenta;
+  color: magenta;
+}
+/* Skill section CSS ends */
+
+/* Project section css starts */
+.projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+.projectHeading{
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.gridProject{
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* flex-wrap: wrap; */
+  max-width: 90vw;
+  font-size: 3rem;
+  padding: 2vh 5vw;
+}
+.projectList{
+  max-width: 23vw;
+  background-color: var(--card-color);
+  margin: 1vh 1vw;
+  padding:2vh 2vw;
+  border-radius:4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.projectList img{
+  align-items: center;
+  margin: 1vh 1vh;
+  max-height: 50vh;
+  width: auto;
+  border-radius: 5vw;
+}
+.projectName{
+  margin: 2vh 0vw 3vh 0vw;
+}
+.projectName a{
+  font-family: 'Source Code Pro', monospace;
+  font-size:1.5rem;
+  font-weight:bold;
+  color: var(--cardprimary-color);
+  /* text-decoration: none; */
+}
+.projInfo{
+  font-size: 1rem;
+  color: var(--cardtxt);
+}
+footer {
+  background-color: var(--cardtxt);
+  color: var(--cardprimary-color);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  .intro{
+    flex-direction: column;
+    align-items: center;
+    padding-top:6vh;
+  }
+  .name{
+  font-size: 20px;
+  }
+  .avatar img{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .list{
+    flex-wrap: wrap;
+
+  }
+  .listItem{
+    padding: 3vw;
+    margin:2vh;
+    font-weight: 500;
+  }
+  .gridProject{
+    flex-direction: column;
+    padding: 0vh 10vw;
+    }
+    .projectList{
+      flex-direction: column;
+      width: auto;
+      max-width: 90vw;
+    }
+}
